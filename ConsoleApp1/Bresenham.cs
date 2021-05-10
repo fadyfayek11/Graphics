@@ -6,8 +6,7 @@ namespace Graphics
 {
     class Bresenham
     {
-        public List<int> Xpoints = new List<int>();
-        public List<int> Ypoints = new List<int>();
+      
         public Bresenham()
         {
 
@@ -36,8 +35,13 @@ namespace Graphics
                 x = x0; 
                 y = y0;
             }
-           
 
+            Console.WriteLine("2 D(Y) = " + twoDy);
+            Console.WriteLine("2 D(Y-X) = "+ twoDyMinusDx);
+            Console.WriteLine("-----------");
+
+            Console.WriteLine("(" + x + "," + y + ")" + "\t" + "Pk = " + p0);
+            
             while (x < xEnd)
             {
                 x++;
@@ -51,8 +55,7 @@ namespace Graphics
                     y++;
                     p0 += twoDyMinusDx;
                 }
-                Xpoints.Add(x);
-                Ypoints.Add(y);
+                Console.WriteLine("(" + x + "," + y + ")"+"\t"+"Pk = "+ p0);
             }
         }
     }

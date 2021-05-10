@@ -6,9 +6,7 @@ namespace Graphics
 {
     class DDA
     {
-       public  List<int> Xpoints = new List<int>();
-       public List<int> Ypoints = new List<int>();
-
+       
         public DDA()
         {
 
@@ -33,18 +31,22 @@ namespace Graphics
                 steps = Math.Abs(dy);
             }
 
-           
+            Console.WriteLine("D of X = "+dx);
+            Console.WriteLine("D of Y = " + dy);
+            Console.WriteLine("Slop = " + slop);
+
+            Console.WriteLine("-----------");
+
 
             if (slop > 1)
             {
                 for (int i = 0; i < steps; i++)
                 {
-                    y0++;
-                    Ypoints.Add(y0);
+                     y0++;                  
 
                      x += (1 / slop);
                      xf = (int)Math.Round(x);
-                     Xpoints.Add(xf);
+                     Console.WriteLine("(" + xf + "," + y0 + ")" + "\t" + "Orignal X = " + x);
                 }
             }
             else
@@ -52,11 +54,12 @@ namespace Graphics
                 for (int i = 0; i < steps; i++)
                 {
                     x0++;
-                    Xpoints.Add(x0);
+                   
 
                     y += slop;
                     yf = (int)Math.Round(y);
-                    Ypoints.Add(yf);
+                  
+                    Console.WriteLine("(" + x0 + "," + yf + ")"+"\t"+"Orignal Y = "+ y);
                 }
             }           
 

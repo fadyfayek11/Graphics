@@ -6,8 +6,7 @@ namespace Graphics
 {
     class Circle
     {
-        public List<int> Xpoints = new List<int>();
-        public List<int> Ypoints = new List<int>();
+        
         public Circle()
         {
 
@@ -18,7 +17,7 @@ namespace Graphics
             int x = 0;
             int y = r;
             int p0 = 1 - r;
-
+            
             while (x < y)
             {
                 if (p0 < 0)
@@ -31,8 +30,7 @@ namespace Graphics
                     y--;
                 }
                 x++;
-                Xpoints.Add(x);
-                Ypoints.Add(y);
+                Console.WriteLine("(" + x + "," + y + ")");
             }
 
         }
